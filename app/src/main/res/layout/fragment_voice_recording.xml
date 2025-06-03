@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".fragments.VoiceRecordingFragment">
+
+    <Button
+        android:id="@+id/buttonStartRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voice_start_recording_button_text"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonStopRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voice_stop_recording_button_text"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonPlayRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voice_play_recording_button_text"/>
+
+</LinearLayout>
