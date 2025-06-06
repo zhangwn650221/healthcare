@@ -35,6 +35,17 @@
     <string name="video_path_display_text">Video saved at: %s</string>
     <string name="video_playback_error">Error playing video</string>
 
+    <!-- VideoRecordingFragment status messages (added in this step) -->
+    <string name="permissions_granted_message">Permissions granted</string>
+    <string name="storage_permission_denied_message">Storage permission denied</string>
+    <string name="camera_permission_denied_message">Camera permission severely denied</string>
+    <string name="video_no_app_handler_message">No application available to handle video capture.</string>
+    <string name="video_saved_at_message">Video capture intent returned, URI: %s</string>
+    <string name="video_recording_successful_message">Video recording process successful.</string>
+    <string name="video_failed_retrieve_message">Failed to retrieve video.</string>
+    <string name="video_recording_cancelled_message">Video recording cancelled by user.</string>
+    <string name="video_recording_failed_message">Video recording failed.</string>
+
     <!-- Navigation Titles (for BottomNavigationView) -->
     <string name="nav_home_title">Home</string>
     <string name="nav_diary_title">Diary</string>
