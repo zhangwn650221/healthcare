@@ -1,32 +1,50 @@
 <resources>
     <string name="app_name">EmotionApp</string>
+
+    <!-- MainActivity specific (might be unused with Fragments) -->
+    <string name="main_open_diary_button_text">Open Diary</string>
+    <string name="main_open_voice_recorder_button_text">Record Voice</string>
+    <string name="main_open_video_recorder_button_text">Record Video</string>
+
+    <!-- Diary Feature -->
     <string name="diary_activity_title">New Diary Entry</string>
     <string name="diary_edit_text_hint">Write your thoughts here...</string>
     <string name="diary_save_button_text">Save Entry</string>
+    <string name="diary_entry_saved_toast">Entry saved</string>
+    <string name="diary_entry_empty_toast">Entry cannot be empty</string>
 
+    <!-- Voice Recording Feature -->
     <string name="voice_activity_title">Record Voice Note</string>
     <string name="voice_start_recording_button_text">Start Recording</string>
     <string name="voice_stop_recording_button_text">Stop Recording</string>
     <string name="voice_play_recording_button_text">Play Recording</string>
+    <string name="voice_recording_permission_denied_toast">Recording permission denied</string>
+    <string name="voice_recording_failed_toast">Recording failed</string>
+    <string name="voice_playback_failed_toast">Playback failed</string>
+    <string name="voice_file_saved_at_toast">Recording saved at: %s</string>
+    <string name="voice_no_recording_toast">No recording to play</string>
 
+    <!-- Video Recording Feature -->
     <string name="video_activity_title">Record Video Note</string>
     <string name="video_start_capture_button_text">Start Video Capture</string>
-    <string name="video_path_placeholder">Video path will appear here</string>
-    <string name="video_saved_at_message">Video saved at: %s</string>
-    <string name="video_failed_retrieve_message">Failed to retrieve video.</string>
-    <string name="video_recording_cancelled_message">Video recording cancelled.</string>
-    <string name="video_recording_failed_message">Video recording failed.</string>
-    <string name="video_no_app_handler_message">No app can handle video recording.</string>
-    <string name="permissions_granted_message">Permissions granted</string>
-    <string name="storage_permission_denied_message">Storage permission denied. Video may not save correctly.</string>
-    <string name="camera_permission_granted_message">Camera permission granted</string>
-    <string name="camera_permission_denied_message">Camera permission denied. Cannot record video.</string>
-    <string name="video_recording_successful_message">Video recording successful!</string>
+    <string name="video_path_placeholder">Video will be saved to default location.</string>
+    <string name="video_capture_permission_denied_toast">Camera permission denied</string>
+    <string name="video_capture_failed_toast">Video capture failed</string>
+    <string name="video_capture_success_toast">Video saved successfully</string>
+    <string name="video_capture_cancelled_toast">Video capture cancelled</string>
+    <string name="video_path_display_text">Video saved at: %s</string>
+    <string name="video_playback_error">Error playing video</string>
 
-    <!-- Bottom Navigation Titles -->
+    <!-- Navigation Titles (for BottomNavigationView) -->
     <string name="nav_home_title">Home</string>
     <string name="nav_diary_title">Diary</string>
     <string name="nav_voice_title">Voice</string>
     <string name="nav_video_title">Video</string>
+
+    <!-- Placeholder/Default Fragment Texts -->
+    <string name="home_fragment_text">Welcome Home!</string>
+    <string name="diary_fragment_placeholder_text">Diary Feature (Placeholder)</string>
+    <string name="voice_fragment_placeholder_text">Voice Recording Feature (Placeholder)</string>
+    <string name="video_fragment_placeholder_text">Video Recording Feature (Placeholder)</string>
 
 </resources>
