@@ -1,14 +1,6 @@
 package com.example.emotionapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-package com.example.emotionapp; // Ensure this is the correct package
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -51,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Load default fragment
         if (savedInstanceState == null) {
-            bottomNavigationView.setSelectedItemId(R.id.nav_home); // Select home and trigger listener
+            // This will also trigger onItemSelected, loading the HomeFragment
+            bottomNavigationView.setSelectedItemId(R.id.nav_home);
         }
     }
 
