@@ -9,6 +9,7 @@ import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.assertion.ViewAssertions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.lifecycle.Lifecycle; // Added import for Lifecycle
 
 import com.example.emotionapp.R; // Assuming R class is in this package
 
@@ -46,7 +47,7 @@ public class DiaryFragmentTest {
     @Test
     public void testSaveAndLoadDiaryEntry() {
         // Launch fragment
-        FragmentScenario<DiaryFragment> scenario = FragmentScenario.launchInContainer(DiaryFragment.class, null, R.style.Theme_EmotionApp, null);
+        FragmentScenario<DiaryFragment> scenario = FragmentScenario.launchInContainer(DiaryFragment.class, null, androidx.appcompat.R.style.Theme_AppCompat, Lifecycle.State.RESUMED);
 
         String testEntry = "This is a test diary entry.";
 
@@ -69,7 +70,7 @@ public class DiaryFragmentTest {
     @Test
     public void testSaveEmptyDiaryEntry_doesNotSave() {
          // Launch fragment
-        FragmentScenario<DiaryFragment> scenario = FragmentScenario.launchInContainer(DiaryFragment.class, null, R.style.Theme_EmotionApp, null);
+        FragmentScenario<DiaryFragment> scenario = FragmentScenario.launchInContainer(DiaryFragment.class, null, androidx.appcompat.R.style.Theme_AppCompat, Lifecycle.State.RESUMED);
 
         // Click save with empty input
         Espresso.onView(ViewMatchers.withId(R.id.buttonSaveDiary)).perform(ViewActions.click());
@@ -88,7 +89,7 @@ public class DiaryFragmentTest {
     public void testLoadDiaryEntry_whenNoEntryExists_editTextIsEmpty() {
         // Ensure prefs are clear (done in setUp)
         // Launch fragment
-        FragmentScenario<DiaryFragment> scenario = FragmentScenario.launchInContainer(DiaryFragment.class, null, R.style.Theme_EmotionApp, null);
+        FragmentScenario<DiaryFragment> scenario = FragmentScenario.launchInContainer(DiaryFragment.class, null, androidx.appcompat.R.style.Theme_AppCompat, Lifecycle.State.RESUMED);
 
         // Check if EditText is empty
         Espresso.onView(ViewMatchers.withId(R.id.editTextDiary)).check(ViewAssertions.matches(ViewMatchers.withText("")));

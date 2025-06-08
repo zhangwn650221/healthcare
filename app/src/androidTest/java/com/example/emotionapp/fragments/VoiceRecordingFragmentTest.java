@@ -36,7 +36,7 @@ public class VoiceRecordingFragmentTest {
     @Test
     public void testInitialUIState() {
         // Launch the fragment in a container
-        FragmentScenario.launchInContainer(VoiceRecordingFragment.class);
+        FragmentScenario.launchInContainer(VoiceRecordingFragment.class, null, androidx.appcompat.R.style.Theme_AppCompat, null);
 
         // Check initial button states
         onView(withId(R.id.buttonStartRecording)).check(matches(isEnabled()));
@@ -46,7 +46,7 @@ public class VoiceRecordingFragmentTest {
 
     @Test
     public void testStartRecording_UIChanges() {
-        FragmentScenario.launchInContainer(VoiceRecordingFragment.class);
+        FragmentScenario.launchInContainer(VoiceRecordingFragment.class, null, androidx.appcompat.R.style.Theme_AppCompat, null);
 
         // Click start recording button
         onView(withId(R.id.buttonStartRecording)).perform(click());
@@ -61,7 +61,7 @@ public class VoiceRecordingFragmentTest {
 
     @Test
     public void testStopRecording_UIChanges() {
-        FragmentScenario.launchInContainer(VoiceRecordingFragment.class);
+        FragmentScenario.launchInContainer(VoiceRecordingFragment.class, null, androidx.appcompat.R.style.Theme_AppCompat, null);
 
         // Start recording
         onView(withId(R.id.buttonStartRecording)).perform(click());
@@ -101,4 +101,3 @@ public class VoiceRecordingFragmentTest {
     // does NOT lead to the "recording started" UI state if permission is immediately denied by the system
     // (though automated denial is not standard). If the dialog appears, Espresso can't see it.
 }
->>>>>>> REPLACE

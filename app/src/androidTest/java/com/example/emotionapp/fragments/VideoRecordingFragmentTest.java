@@ -127,4 +127,3 @@ public class VideoRecordingFragmentTest {
         onView(withId(R.id.videoViewPlayback)).check(matches(not(isDisplayed())));
     }
 }
->>>>>>> REPLACE

@@ -78,4 +78,3 @@ public class MainActivityNavigationTest {
         onView(withText("Welcome Home!")).check(matches(isDisplayed()));
     }
 }
->>>>>>> REPLACE
