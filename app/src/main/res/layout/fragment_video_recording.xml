@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".fragments.VideoRecordingFragment">
+
+    <Button
+        android:id="@+id/buttonStartVideoCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/video_start_capture_button_text"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewVideoPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/video_path_placeholder"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"/>
+
+    <VideoView
+        android:id="@+id/videoViewPlayback"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
